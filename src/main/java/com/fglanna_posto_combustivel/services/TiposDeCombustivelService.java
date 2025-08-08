@@ -19,27 +19,27 @@ public class TiposDeCombustivelService {
         this.tipoDeCombustivelRepository = tipoDeCombustivelRepository;
     }	
 	
-	private void criar(TiposDeCombustivel tiposDeCombustivel) {
+	public void criar(TiposDeCombustivel tiposDeCombustivel) {
 		tipoDeCombustivelRepository.save(tiposDeCombustivel);
 		
 	}
 	
-	private TiposDeCombustivel buscarTiposDeCombustivelporId(Integer id) {
+	public TiposDeCombustivel buscarTiposDeCombustivelporId(Integer id) {
 		return tipoDeCombustivelRepository.findById(id).orElseThrow(() -> new NullPointerException("Tipo de Combustível Inexistente conforme id. " + id));
 		
 	}
 		
-	private List<TiposDeCombustivel> buscarTiposDeCombustivel() {
+	public List<TiposDeCombustivel> buscarTiposDeCombustivel() {
 		return tipoDeCombustivelRepository.findAll();
 	}
 	
 	@Transactional
-	private void deletarTipoDeCombustivel(Integer id) {
+	public void deletarTipoDeCombustivel(Integer id) {
 		tipoDeCombustivelRepository.deleteById(id);
 		
 	}
 	
-	private void alterarTipoDeCombustivel(Integer id,TiposDeCombustivel tiposDeCombustivel) {
+	public void alterarTipoDeCombustivel(Integer id,TiposDeCombustivel tiposDeCombustivel) {
 		TiposDeCombustivel bomba = buscarTiposDeCombustivelporId(id);
 		tiposDeCombustivel.setId(bomba.getId());
 		tipoDeCombustivelRepository.save(tiposDeCombustivel);

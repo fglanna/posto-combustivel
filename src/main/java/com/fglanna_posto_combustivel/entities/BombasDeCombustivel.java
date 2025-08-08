@@ -49,7 +49,7 @@ public class BombasDeCombustivel {
 		return tiposDeCombustivel;
 	}
 
-	public void setTiposDeCmbustivel(TiposDeCombustivel tiposDeCombustivel) {
+	public void setTiposDeCombustivel(TiposDeCombustivel tiposDeCombustivel) {
 		this.tiposDeCombustivel = tiposDeCombustivel;
 	}
 	

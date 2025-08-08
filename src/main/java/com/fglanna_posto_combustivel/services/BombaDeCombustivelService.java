@@ -37,6 +37,7 @@ public class BombaDeCombustivelService {
 		bombaDeCombustivelRepository.deleteById(id);
 	}
 	
+	@Transactional
 	public void alterarBombaDeCombustivel(Integer id,BombasDeCombustivel bombasDeCombustivel) {
 		BombasDeCombustivel bomba = buscarBombasDeCombustivelporId(id);
 		bombasDeCombustivel.setId(bomba.getId());
