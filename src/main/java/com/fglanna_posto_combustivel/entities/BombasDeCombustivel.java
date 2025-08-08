@@ -8,16 +8,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "bombas_combustivel")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -32,6 +26,33 @@ public class BombasDeCombustivel {
 	
 	@ManyToOne
 	@JoinColumn(name = "combustivel_id")
-	private TiposDeCombustivel tiposDeCmbustivel;
+	private TiposDeCombustivel tiposDeCombustivel;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public TiposDeCombustivel getTiposDeCombustivel() {
+		return tiposDeCombustivel;
+	}
+
+	public void setTiposDeCmbustivel(TiposDeCombustivel tiposDeCombustivel) {
+		this.tiposDeCombustivel = tiposDeCombustivel;
+	}
+	
+	
 
 }

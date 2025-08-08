@@ -11,10 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.*;
-import lombok.NoArgsConstructor;
 
 
 @Entity
@@ -24,6 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
 public class Abastecimento {
 	
 	@Id
@@ -32,7 +30,7 @@ public class Abastecimento {
 	
 	@OneToOne
 	@JoinColumn(name = "bomba_combustivel_id")
-	private BombasDeCombustivel bombaDeCombustivel;
+	private BombasDeCombustivel bombasDeCombustivel;
 	
 	@Column(name = "data_abastecimento")
 	private LocalDate dataAbastecimento;

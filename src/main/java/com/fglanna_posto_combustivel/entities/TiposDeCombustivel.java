@@ -12,8 +12,6 @@ import lombok.*;
 
 @Entity
 @Table(name = "tipos_combustivel")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -26,6 +24,30 @@ public class TiposDeCombustivel {
 	private String nome;
 	@Column(name = "preco_litro")
 	private BigDecimal precoPorLitro;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public BigDecimal getPrecoPorLitro() {
+		return precoPorLitro;
+	}
+	public void setPrecoPorLitro(BigDecimal precoPorLitro) {
+		this.precoPorLitro = precoPorLitro;
+	}
+	
+	
+	
+	
 	
 	
 
